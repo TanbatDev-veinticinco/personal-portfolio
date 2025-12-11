@@ -46,7 +46,7 @@
         <h6>ABOUT WEB DESIGN</h6>
       </a> -->
     </div>
-    <div class="serv-col animate__animated animate__fadeInDown" >
+    <div class="serv-col animate__animated animate__fadeInDown" data-aos="fade-right" >
       <p style="opacity: 0.5">02</p>
       <h2>DEVELOPMENT</h2>
       <h5>

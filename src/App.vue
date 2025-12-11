@@ -3,6 +3,8 @@ import NavBar from "./components/NavBar.vue";
 import letTalk from "./components/LetTalk.vue";
 import FooTer from "./components/FooTer.vue";
 import ScrollToTop from "./components/ScrollToTop.vue";
+
+
 </script>
 
 <template>
