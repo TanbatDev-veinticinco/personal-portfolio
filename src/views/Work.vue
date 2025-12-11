@@ -1,5 +1,5 @@
 <template>
-  <div class="work-page">
+  <div class="work-page" data-aos="fade-up">
     <h1>My Work</h1>
     <p>
       My latest web design projects and see how we can help bring your ideas to
@@ -7,12 +7,13 @@
     </p>
   </div>
 
-  
-  <div class="selec">
+  <div class="selec" data-aos="fade-up">
     <div
-      class="select-work animate__animated animate__fadeInDown"
-      v-for="work in works"
+      class="select-work"
+      v-for="(work, index) in works"
       :key="work.title"
+      data-aos="zoom-in"
+      :data-aos-delay="`${index * 100}`"
     >
       <div class="image-container">
         <img :src="work.image" :alt="work.title" />
@@ -29,7 +30,7 @@
 
 <script setup>
 // Component logic here
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 
 // Use ES modules to import images
 import img1 from "../assets/workPic-1.jpg";
@@ -59,6 +60,28 @@ const works = ref([
     part: "WEB DESIGN",
   },
 ]);
+
+const fadeInDirective = {
+  mounted(el) {
+    el.classList.add("fade-in");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            el.classList.add("visible");
+            observer.unobserve(el); // Only animate once
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(el);
+  },
+};
+
+defineExpose({ fadeInDirective });
 </script>
 
 <style scoped>
@@ -155,6 +178,17 @@ const works = ref([
   border-radius: 2px;
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (max-width: 768px) {
   .selec {
     padding: 10px;
@@ -166,7 +200,7 @@ const works = ref([
     /* gap: 16px; */
   }
 
-  .select-1{
+  .select-1 {
     padding: 16px;
   }
 

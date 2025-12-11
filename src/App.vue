@@ -29,6 +29,7 @@ import ScrollToTop from "./components/ScrollToTop.vue";
 body {
   background-color: #0E0E0E;
   color: #edd6b6;
+  overflow-x: hidden;
 }
 
 .app {

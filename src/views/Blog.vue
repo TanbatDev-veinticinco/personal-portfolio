@@ -1,17 +1,25 @@
 <template>
-  <div class="blog-page">
+  <div class="blog-page" data-aos="fade-up">
     <h1>Blog</h1>
-    <div class="blog-content">
+    <div class="blog-content" data-aos="fade-up">
       <div class="blog-grid">
-        <div class="blog-card" v-for="post in blogPosts" :key="post.id">
+        <div
+          class="blog-card"
+          v-for="(post, index) in blogPosts"
+          :key="post.id"
+          data-aos="zoom-in"
+          :data-aos-delay="`${index * 100}`"
+        >
           <div class="blog-image">
-            <img :src="post.image" :alt="post.title">
+            <img :src="post.image" :alt="post.title" />
           </div>
           <div class="blog-info">
             <span class="blog-date">{{ post.date }}</span>
             <h3>{{ post.title }}</h3>
             <p>{{ post.excerpt }}</p>
-            <router-link :to="'/blog/' + post.id" class="read-more">Read More</router-link>
+            <router-link :to="'/blog/' + post.id" class="read-more"
+              >Read More</router-link
+            >
           </div>
         </div>
       </div>
@@ -23,25 +31,28 @@
 const blogPosts = [
   {
     id: 1,
-    title: 'Getting Started with Vue 3',
-    date: 'March 15, 2024',
-    excerpt: 'Learn the basics of Vue 3 and how to build your first application with the Composition API.',
-    image: 'https://via.placeholder.com/400x250'
+    title: "Getting Started with Vue 3",
+    date: "March 15, 2024",
+    excerpt:
+      "Learn the basics of Vue 3 and how to build your first application with the Composition API.",
+    image: "https://via.placeholder.com/400x250",
   },
   {
     id: 2,
-    title: 'Modern Web Development Trends',
-    date: 'March 10, 2024',
-    excerpt: 'Exploring the latest trends and technologies shaping the future of web development.',
-    image: 'https://via.placeholder.com/400x250'
+    title: "Modern Web Development Trends",
+    date: "March 10, 2024",
+    excerpt:
+      "Exploring the latest trends and technologies shaping the future of web development.",
+    image: "https://via.placeholder.com/400x250",
   },
   {
     id: 3,
-    title: 'Building Responsive Layouts',
-    date: 'March 5, 2024',
-    excerpt: 'A comprehensive guide to creating responsive designs that work across all devices.',
-    image: 'https://via.placeholder.com/400x250'
-  }
+    title: "Building Responsive Layouts",
+    date: "March 5, 2024",
+    excerpt:
+      "A comprehensive guide to creating responsive designs that work across all devices.",
+    image: "https://via.placeholder.com/400x250",
+  },
 ];
 </script>
 
@@ -49,7 +60,7 @@ const blogPosts = [
 .blog-page {
   padding: 100px 20px;
   min-height: 100vh;
-  background-color: #0E0E0E;
+  background-color: #0e0e0e;
   color: #edd6b6;
 }
 
@@ -125,6 +136,6 @@ h1 {
 
 .read-more:hover {
   background-color: #edd6b6;
-  color: #0E0E0E;
+  color: #0e0e0e;
 }
-</style> 
+</style>

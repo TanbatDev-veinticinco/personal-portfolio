@@ -1,9 +1,9 @@
 <template>
-  <div class="hero-page">
-    <div class="hero-img">
-      <img src="../assets/erika.png" alt="" />
+  <div class="hero-page" data-aos="fade-up">
+    <div class="hero-img" data-aos="fade-left">
+      <img src="../assets/erika.png" alt="heroimg" />
     </div>
-    <div class="hero-text">
+    <div class="hero-text" data-aos="fade-right">
       <h1>
         Web Designer <br />
         & Developer
@@ -20,7 +20,7 @@
   </div>
 
   <div class="my-services">
-    <div class="serv-col  animate__animated  animate__fadeInLeft" >
+    <div class="serv-col" data-aos="fade-up">
       <p style="opacity: 0.5">01</p>
       <h2>WEB DESIGN</h2>
       <h5>
@@ -46,7 +46,10 @@
         <h6>ABOUT WEB DESIGN</h6>
       </a> -->
     </div>
-    <div class="serv-col animate__animated animate__fadeInDown" data-aos="fade-right" >
+    <div
+      class="serv-col animate__animated animate__fadeInDown"
+      data-aos="fade-right"
+    >
       <p style="opacity: 0.5">02</p>
       <h2>DEVELOPMENT</h2>
       <h5>
@@ -72,7 +75,7 @@
         <h6>ABOUT DEVELOPMENT</h6>
       </a> -->
     </div>
-    <div class="serv-col animate__animated animate__fadeInRight"  >
+    <div class="serv-col" data-aos="fade-left">
       <p style="opacity: 0.5">03</p>
       <h2>CONTENT & SEO</h2>
       <h5>
@@ -113,18 +116,24 @@ export default {
   justify-self: center;
 }
 
-.hero-img img {
-  width: 500px;
-  display: block;
-  margin: 0 auto;
-  /* max-width: 100%; */
-  /* min-width: 500px; */
-  justify-content: center;
-  padding-top: 50px;
-  align-items: center;
-  align-content: center;
-  justify-self: center;
+.hero-img {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;          
+  overflow: hidden;        
+  padding-top: 50px; 
+  display: flex;           
+  justify-content: center; 
+  align-items: center;     
 }
+
+.hero-img img {
+  width: 100%;
+  height: auto;
+  display: block;          /* removes extra space under image */
+  max-width: 100%;
+}
+
 
 .hero-text {
   text-align: center;
@@ -198,7 +207,7 @@ export default {
 }
 
 .serv-col {
-  border: solid  #343230 1px;
+  border: solid #343230 1px;
   border-radius: 3px;
   display: flex;
   flex: 1 0 0px;
@@ -232,7 +241,7 @@ export default {
 }
 
 .hover-link:hover .arrow {
-    transform: rotate(270deg);
+  transform: rotate(270deg);
 }
 
 .di-arr {
@@ -248,7 +257,6 @@ export default {
   justify-content: center;
   align-items: center;
 }
-
 
 .serv-arr {
   display: flex;
@@ -286,7 +294,7 @@ export default {
   }
 }
 
-@media  (max-width: 991px) {
+@media (max-width: 991px) {
   .serv-col {
     flex: none;
     padding: 40px;
@@ -298,5 +306,4 @@ export default {
     flex-direction: column;
   }
 }
-
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="process">
+  <div class="process" data-aos="fade-up">
     <h5>THE PROCESS</h5>
     <h1>
       Your Website <br />
@@ -11,7 +11,7 @@
     </p>
   </div>
 
-  <div class="timeline">
+  <div class="timeline" data-aos="fade-up">
     <!-- vertical line -->
     <div class="ver-line">
       <!-- <div class="frame">
@@ -58,7 +58,7 @@
     </div>
 
     <!-- card -->
-    <div class="card right animate__animated animate__bounceInRight">
+    <div class="card right" data-aos="fade-right">
       <div class="content">
         <span class="time-label">2 HOURS</span>
         <h4>DO WE MATCH?</h4>
@@ -76,7 +76,7 @@
       </div>
     </div>
     <!-- second card -->
-    <div class="card left animate__animated animate__bounceInLeft">
+    <div class="card left" data-aos="fade-left">
       <div class="content">
         <span class="time-label">2 WEEKS</span>
         <h4>WE NEED A PLAN</h4>
@@ -96,7 +96,7 @@
       </div>
     </div>
     <!-- third card -->
-    <div class="card right">
+    <div class="card right" data-aos="fade-right" data-aos-delay="200">
       <div class="content">
         <span class="time-label">2 WEEKS</span>
         <h4>SOME MAGIC</h4>
@@ -115,12 +115,13 @@
       </div>
     </div>
     <!-- forth card -->
-    <div class="card left">
+    <div class="card left" data-aos="fade-left" data-aos-delay="200">
       <div class="content">
         <span class="time-label">2 WEEKS</span>
         <h4>MORE MAGIC</h4>
         <h2>DEVELOPMENT</h2>
-        <P>In this step, we breathe life into your new high-end design. You will
+        <P
+          >In this step, we breathe life into your new high-end design. You will
           receive a custom-built website using a modular web design system and
           CMS integration. Animations will add the necessary flair to your site
           and set you apart from the boring competition.

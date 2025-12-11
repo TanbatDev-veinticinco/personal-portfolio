@@ -1,16 +1,16 @@
 <template>
-  <div class="lets-talk-page">
+  <div class="lets-talk-page" data-aos="fade-up">
     <h1>Let's Talk</h1>
-    <div class="contact-content">
-      <div class="contact-info">
+    <div class="contact-content" data-aos="fade-up" data-aos-delay="200">
+      <div class="contact-info" data-aos="fade-right">
         <h2>Get in Touch</h2>
         <p>
           Feel free to reach out to me for any inquiries or collaboration
           opportunities.
         </p>
 
-        <div class="contact-methods">
-          <div class="contact-method">
+        <div class="contact-methods" data-aos="fade-up" data-aos-delay="400">
+          <div class="contact-method" data-aos="fade-up" data-aos-delay="500">
             <h3>Email</h3>
             <p>your.email@example.com</p>
           </div>

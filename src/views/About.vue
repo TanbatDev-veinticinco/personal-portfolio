@@ -1,10 +1,10 @@
 <template>
   <section class="content">
-    <div class="about-content">
-      <div class="about-img">
+    <div class="about-content" data-aos="fade-up">
+      <div class="about-img" data-aos="fade-left">
         <img src="../assets/erika.png" alt="" />
       </div>
-      <div class="about-1">
+      <div class="about-1" data-aos="fade-right">
         <h1>
           ALATISHE <br />
           OMOLAYO
@@ -181,7 +181,7 @@ const experience = [
   opacity: 0.6;
 }
 
-.about-1 h5{
+.about-1 h5 {
   font-size: clamp(16px, 2vw, 22px);
   line-height: 150%;
   font-weight: 400;
@@ -313,11 +313,11 @@ const experience = [
   justify-content: flex-start;
   gap: 1rem;
   background: #0e0d0c;
-  border: 1.5px solid rgba(225, 225, 225, 0.18);;
+  border: 1.5px solid rgba(225, 225, 225, 0.18);
   border-radius: 6px;
   padding: 1.25rem 1.5rem;
   color: #edd6b6;
-  font-family: 'Satoshi', 'Inter', sans-serif;
+  font-family: "Satoshi", "Inter", sans-serif;
   font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: 1.5px;
@@ -346,13 +346,15 @@ const experience = [
   transition: transform 0.2s;
 }
 
-.social-btn:hover, .social-btn:focus {
+.social-btn:hover,
+.social-btn:focus {
   background: #181715;
   border-color: #c2a97b;
   box-shadow: 0 2px 16px 0 rgba(237, 214, 182, 0.08);
 }
 
-.social-btn:hover .arrow, .social-btn:focus .arrow {
+.social-btn:hover .arrow,
+.social-btn:focus .arrow {
   transform: translateX(6px);
 }
 
@@ -406,15 +408,15 @@ const experience = [
     width: 100%;
   }
 
-  .about-1 h1{
+  .about-1 h1 {
     text-align: center;
   }
 
-  .about-1 h5{
+  .about-1 h5 {
     text-align: center;
   }
 
-  .serv{
+  .serv {
     align-items: center;
     display: flex;
     justify-content: center;

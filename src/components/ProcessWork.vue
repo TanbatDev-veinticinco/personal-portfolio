@@ -1,19 +1,20 @@
 <template>
-  <div class="process">
+  <div class="process" data-aos="fade-up">
     <h5>THE PROCESS</h5>
     <h1>
       Your Website <br />
       in 5 steps
     </h1>
     <p>
-      Our process ensures that we create a website tailored to your business needs.
+      Our process ensures that we create a website tailored to your business
+      needs.
     </p>
   </div>
 
-  <div class="timeline">
+  <div class="timeline" data-aos="fade-up">
     <div class="ver-line">
       <div class="number" v-for="(card, index) in cards" :key="index">
-        <span>{{ index + 1 < 6 ? '0' + (index + 1) : index + 1 }}</span>
+        <span>{{ index + 1 < 6 ? "0" + (index + 1) : index + 1 }}</span>
       </div>
     </div>
 
@@ -22,6 +23,8 @@
       :class="[index % 2 === 0 ? 'right' : 'left']"
       v-for="(card, index) in cards"
       :key="index"
+      :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
+      :data-aos-delay="`${index * 100}`"
     >
       <div class="content">
         <span class="time-label">{{ card.duration }}</span>
@@ -241,8 +244,6 @@ export default {
   }
 }
 </style>
-
-
 
 <!-- <template>
   <div>

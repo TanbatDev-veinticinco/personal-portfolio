@@ -1,5 +1,5 @@
 <template>
-  <div class="about-page">
+  <div class="about-page" data-aos="fade-up" >
     <div class="name-container left-name">
       <p>ALATISHE</p>
     </div>
@@ -11,7 +11,7 @@
     </div>
   </div>
 
-  <div class="about-1">
+  <div class="about-1"  data-aos="fade-up" >
     <div class="talks">
       <h2>
         A website that leaves <br />

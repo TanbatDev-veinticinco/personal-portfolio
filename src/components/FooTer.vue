@@ -1,8 +1,8 @@
 <template>
-  <footer class="footer">
+  <footer class="footer" data-aos="fade-up">
     <div class="footer-content">
       <!-- Navigation and Contact Info -->
-      <div class="footer-top">
+      <div class="footer-top" data-aos="fade-up" data-aos-delay="100">
         <div class="footer-nav">
           <ul class="nav-menu">
             <li class="nav-item">
@@ -120,7 +120,7 @@ export default {
   letter-spacing: 1px;
 }
 
-.nav-li{
+.nav-li {
   text-decoration: none;
   font-size: 35px;
 }

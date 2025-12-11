@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="work">
+    <div class="work" data-aos="fade-up">
       <h2>Selected Work</h2>
       <a href="#" class="hef">
         <div class="di-arr">
@@ -12,9 +12,11 @@
 
     <br /><br />
 
-    <div class="selec">
+    <div class="selec" data-aos="fade-up">
       <div
-        class="select-work animate__animated animate__fadeInDown"
+        class="select-work"
+        data-aos="zoom-in"
+        :data-aos-delay="`${works.indexOf(work) * 100}`"
         v-for="work in works"
         :key="work.title"
       >
@@ -154,7 +156,7 @@ const works = ref([
   object-fit: cover;
 }
 
-.select-1{
+.select-1 {
   z-index: 2;
   position: absolute;
   bottom: 0;
@@ -219,7 +221,7 @@ const works = ref([
     /* gap: 16px; */
   }
 
-  .select-1{
+  .select-1 {
     padding: 16px;
   }
 

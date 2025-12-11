@@ -15,8 +15,8 @@
       <div class="line"></div>
     </div>
 
-    <div class="project">
-      <div class="project-inner">
+    <div class="project" data-aos="fade-up">
+      <div class="project-inner" data-aos="fade-up" data-aos-delay="200">
         <p class="pro">project in mind?</p>
         <p class="big-text">let's make your <br />Website shine</p>
         <p class="desc">
@@ -152,4 +152,3 @@ export default {
   }
 }
 </style>
-
