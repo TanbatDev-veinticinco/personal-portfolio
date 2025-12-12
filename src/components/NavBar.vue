@@ -96,7 +96,6 @@ li {
 }
 
 
-
 header {
   display: flex;
   justify-content: center;
